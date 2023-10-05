@@ -21,7 +21,7 @@ I learned how to give multiple confirm prompts to the user, and I also learned h
 the math.random method to generate a string of random characters from an even longer string.
 
 ## Screenshot 
-[Alt text](<./images/Screenshot 2023-10-05 164803.png>)
+![Alt text](<images/Screenshot 2023-10-05 164803.png>)
 
 ## Link to application
 [a link] (https://joseph03v.github.io/Wk3PasswordGenerator/)
