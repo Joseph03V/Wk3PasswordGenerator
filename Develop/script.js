@@ -3,17 +3,18 @@ var generateBtn = document.querySelector("#generate"); //button
 
 //generate password function
 function generatePassword() {
-  //variables for the password criteria
+
+//declare variables for the password criteria
+var passwordCharacters = "";
+var userCriteria = true;
+var password = " ";
+var passwordLength;
 var uppercaseLetters ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowercaseLetters ="abcdefghijklmnopqrstuvwxyz";
 var numbers ="0123456789";
 var specials ="!@#$%^&*()?{}[]";
-var passwordCharacters = "";
-var userChoice = true;
-var password = " ";
-var passwordLength;
+
 //Get the desired length of the password
-getLength();
 function getLength(){
   passwordLength = window.prompt("How long do you want the password? (Between 8 and 128)");
   if (passwordLength < 8 || passwordLength > 128) {
@@ -21,34 +22,38 @@ function getLength(){
     getLength();
   }
 }
+getLength();
+
+
 //Get password criteria
+
   //uppercase letters criteria
-  userChoice = window.confirm("Do you want Uppercase Letters?");
-  if (userChoice === false) {
+  userCriteria = window.confirm("Do you want Uppercase Letters?");
+  if (userCriteria === false) {
     window.alert("Okay! No Uppercase!");
   }else{
     passwordCharacters += uppercaseLetters;
   }
 
   //lowercase letters criteria
-  userChoice = window.confirm("Do you want Lowercase Letters?");
-  if (userChoice === false) {
+  userCriteria = window.confirm("Do you want Lowercase Letters?");
+  if (userCriteria === false) {
     window.alert("Okay! No Lowercase!");
   } else{
     passwordCharacters += lowercaseLetters;
   }
 
   //numbers criteria
-  userChoice = window.confirm("Do you want Numbers?");
-  if (userChoice === false) {
+  userCriteria = window.confirm("Do you want Numbers?");
+  if (userCriteria === false) {
     window.alert("Okay! No Numbers!");
   }else{
     passwordCharacters += numbers;
   }
 
   //special character criteria
-  userChoice = window.confirm("Do you want Special Characters?");
-  if (userChoice === false) {
+  userCriteria = window.confirm("Do you want Special Characters?");
+  if (userCriteria === false) {
     window.alert("Okay! No Special Characters!");
   }else{
     passwordCharacters += specials;
@@ -61,6 +66,7 @@ function getLength(){
   }
 
   //generate the actual password
+
   // hey look Derick I used ++i instead of i++!!!!!!!!!!!!
   // hey look Derick I used ++i instead of i++!!!!!!!!!!!!
   // hey look Derick I used ++i instead of i++!!!!!!!!!!!!
