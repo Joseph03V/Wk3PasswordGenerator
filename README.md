@@ -24,3 +24,4 @@ the math.random method to generate a string of random characters from an even lo
 ![Alt text](<../images/Screenshot 2023-10-05 164803.png>)
 
 ## Link to application
+[a link] (https://joseph03v.github.io/Wk3PasswordGenerator/)
